@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.py">
+    <link rel="stylesheet" href="final22.1.py">
+    <link rel="stylesheet" href="fearless.py">
+    
+    <title> PAIMON </title>
+
+
+    <script type="text/javascript">
+        function verificarContraseña()
+         {
+            var password = prompt("Por favor, ingresa la contraseña:");
+            if (password === "fangxbuster") {
+                alert("Contraseña correcta. Bienvenido.");
+            } else {
+                alert("Contraseña incorrecta.");
+                window.location.href = "error.html";  
+                // Redirige a otra página en caso de contraseña incorrecta.
+            }
+        }
+
+
+    </script>
+
+
+</head>
+
+
+<body onload="verificarContraseña()">
+
+    <div class="conteiner">
+
+<header>
+    <a href="#" class="logo">
+        <img src="img/paimon.png" alt=""> 
+        <h1 id="Paimon">Paimon</h1>
+    </a>
+
+</header>
+
+
+<div class="conteiner">
+
+<div class="cart">
+    <div class="btn-1">
+        <br>
+<div class="jose">
+        <button class="boton-imagen" onclick="document.getElementById('sala1').scrollIntoView({ behavior: 'smooth' });">
+             <img src="img/sala1.png" alt="Boton-1">
+        </button>
+    </div>
+    <div class="martincito">
+        <button class="boton-imagen1" onclick="document.getElementById('sala2').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/sala2.png" alt="Boton-2">
+        </button>
+    </div>
+        <div class="candia">
+        <button class="boton-imagen2" onclick="document.getElementById('sala3').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/sala3.png" alt="Boton-3">
+        </button>
+    </div>
+    <div class="eldad">
+        <button class="boton-imagen3" onclick="document.getElementById('sala4').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/sala4.png" alt="Boton-4">
+        </button>
+    </div>
+    <div class="lucas">
+        <button class="boton-imagen4" onclick="document.getElementById('ALL').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/all.png" alt="Boton-5">
+        </button>
+    </div>
+        
+        </div>
+</div>
+<div class="cart-1">
+    <section>
+        <div class="content">
+            <section id="sala1">
+                <h2>SALA 1</h2>
+                <form id="mensaje-form">
+                    <textarea id="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                    <button type="button" onclick="enviarMensaje()">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </div>
+        <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/up.png" alt="Boton-9">
+    </section>
+</div>
+<div class="cart-2">
+    <section>
+        <h2 id="sala2">SALA 2</h2>
+        <form id="mensaje-form" action="/procesar" method="POST">
+            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="button" onclick="enviarMensaje()">Enviar</button>
+        </form>
+    
+        <script>
+            function enviarMensaje() {
+                var mensaje = document.getElementById('mensaje').value;
+                alert("Mensaje recibido: " + mensaje);
+                // Aquí puedes agregar código para enviar el mensaje a un servidor, etc.
+            }
+            
+        </script>
+        <!-- Más contenido aquí -->
+        <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/up.png" alt="Boton-9">
+    </section>
+</div>
+<div class="cart-3">
+    <section>
+        
+        <h2 id="sala3">SALA 3</h2>
+        <form id="mensaje-form" action="/procesar" method="POST">
+            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="button" onclick="enviarMensaje()">Enviar</button>
+        </form>
+
+
+        
+        <!-- Más contenido aquí -->
+        <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/up.png" alt="Boton-9">
+    </section>
+</div>
+<div class="cart-4">
+    <section>
+        <h2 id="sala4">SALA 4</h2>
+        <form id="mensaje-form" action="/procesar" method="POST">
+            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="button" onclick="enviarMensaje()">Enviar</button>
+        </form>
+    
+        <script>
+            function enviarMensaje() {
+                var mensaje = document.getElementById('mensaje').value;
+                alert("Mensaje recibido: " + mensaje);
+                // Aquí puedes agregar código para enviar el mensaje a un servidor, etc.
+            }
+            
+        </script>
+        <!-- Más contenido aquí -->
+        <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/up.png" alt="Boton-9">
+    </section>
+</div>
+<div class="cart-5">
+    <section>
+        <h2 id="ALL">ALL</h2>
+        <form id="mensaje-form" action="/procesar" method="POST">
+            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="button" onclick="enviarMensaje()">Enviar</button>
+        </form>
+    
+        <script>
+            function enviarMensaje() 
+            {
+                var mensaje = document.getElementById('mensaje').value;
+                alert("Mensaje recibido: " + mensaje);
+                
+                // Aquí puedes agregar código para enviar el mensaje a un servidor, etc.
+            }
+            
+        </script>
+        
+        <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+            <img src="img/up.png" alt="Boton-9">
+
+        <!-- Más contenido aquí -->
+
+    </section>
+</div>
+
+</div>
+    
+</div>
+
+
+    
+
+
+</body>
+
+
+
+</html>

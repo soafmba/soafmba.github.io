@@ -1,0 +1,207 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    min-height: 75px;
+    background-color: rgb(207, 26, 165);
+    align-items: center;
+    padding: 10px;
+    
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 100px;
+    margin-right: 10px;
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+    background-color: rgb(48, 46, 57);
+}
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.btn-1{
+    width: 75px;
+    height: 45px;   
+}
+.image{
+
+    display: inline-block;
+    height: 460px;
+    width: 950px;
+    padding-left: 400%;
+    padding-top: 50%;
+}
+.cart{
+background-image: url(img/Cam_Map.png);
+background-repeat: no-repeat;
+
+    width: cover;
+    height: 670px;
+   
+    margin: 5px;
+}
+.cart-1{
+
+    width: cover;
+    height: 720px;
+    background-color: rgb(48, 46, 57);   /*borrar----------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------*/
+    margin: 2px;
+}
+.cart-2{
+
+    width: cover;
+    height: 720px;
+    background-color: rgb(48, 46, 57);   /*borrar----------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------*/
+    margin: 2px;
+}.cart-3{
+
+    width: cover;
+    height: 720px;
+    background-color: rgb(48, 46, 57);   /*borrar----------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------*/
+    margin: 2px;
+}
+.cart-4{
+
+    width: cover;
+    height: 720px;
+    background-color: rgb(48, 46, 57);   /*borrar----------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------*/
+    margin: 2px;
+}
+.cart-5{
+
+    width: cover;
+    height: 720px;
+    background-color: rgb(48, 46, 57);   /*borrar----------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------*/
+    margin: 2px;
+}
+.boton-imagen {
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 5px;
+    position: absolute;
+    left: 362%;
+    top: 44%;
+}
+.boton-imagen1 {
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 5px;
+    position:absolute;
+    left: 330%;
+    top: 69%;
+}
+.boton-imagen2 {
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 5px;
+    position:absolute;
+    left: 166%;
+    top: 32%;
+}
+.boton-imagen3 {
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 5px;
+    position:absolute;
+    left: 281%;
+    top: 48%;
+}
+.boton-imagen4 {
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 5px;
+    position: absolute;
+    top: -166%;
+    left: 694%;
+}
+.jose {
+    position: relative;
+    width: 157px;
+    height: 108px;
+}
+.martincito {
+    position: relative;
+    width: 157px;
+    height: 108px;
+}
+.candia {
+    position: relative;
+    width: 157px;
+    height: 108px;
+
+}
+.eldad {
+    position: relative;
+    width: 157px;
+    height: 108px;
+}
+.lucas {
+    position: relative;
+    width: 157px;
+    height: 108px;
+}
+input[type="text"], textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+textarea {
+    width: 1000px;
+    height: 300px; /* Ajusta la altura del área de texto */
+    resize: none; /* Impide que los usuarios cambien el tamaño */}
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #6cabcf;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        margin-top: 210px;
+    }
+    
+    button:hover {
+        background-color: #ffffff;}
+h2{
+    color: aliceblue;
+}
+.boton-imagen9{
+    display: inline-block;
+    padding: 0px 0px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6cabcf;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-top: 225px;
+    margin-left: 10px;
+}
