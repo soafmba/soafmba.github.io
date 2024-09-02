@@ -13,7 +13,7 @@
     <script type="text/javascript">
         function verificarContraseña() {
             var password = prompt("Por favor, ingresa la contraseña:");
-            if (password === "gus") {
+            if (password === "fangxbuster") {
                 alert("Contraseña correcta. Bienvenido.");
             } else {
                 alert("Contraseña incorrecta.");
@@ -21,8 +21,8 @@
             }
         }
 
-        function enviarMensaje() {
-            var mensaje = document.getElementById('mensaje').value;
+        function enviarMensaje(sectionId) {
+            var mensaje = document.getElementById(`mensaje-${sectionId}`).value;
             var formData = new FormData();
             formData.append('text', mensaje);
 
