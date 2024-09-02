@@ -14,19 +14,42 @@
 
 
     <script type="text/javascript">
-        function verificarContraseña()
-         {
+        function verificarContraseña() {
             var password = prompt("Por favor, ingresa la contraseña:");
             if (password === "fangxbuster") {
                 alert("Contraseña correcta. Bienvenido.");
             } else {
                 alert("Contraseña incorrecta.");
-                window.location.href = "error.html";  
-                // Redirige a otra página en caso de contraseña incorrecta.
+                window.location.href = "error.html";
             }
         }
 
+        function enviarMensaje() {
+            var mensaje = document.getElementById('mensaje').value;
+            var formData = new FormData();
+            formData.append('text', mensaje);
 
+            // Enviar la solicitud al backend para convertir texto a voz
+            fetch('/convert', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al convertir el texto a voz');
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                var url = window.URL.createObjectURL(blob);
+                var audio = new Audio(url);
+                audio.play();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al convertir el texto a voz');
+            });
+        }
     </script>
 
 
