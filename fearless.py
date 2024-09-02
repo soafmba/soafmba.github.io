@@ -1,31 +1,27 @@
-
-from flask import Flask, request, jsonify
-import pyttsx3
+from flask import Flask, render_template, request, send_file
+from gtts import gTTS
+import os
 
 app = Flask(__name__)
-
-# Inicializa el motor pyttsx3
-engine = pyttsx3.init()
-engine.setProperty('rate', 150)  
-engine.setProperty('volume', 1.0)  
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id) 
-
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return render_template('index.html')
 
-@app.route('/send-command', methods=['POST'])
-def send_command():
-    data = request.json
-    texto = data.get('text', '')
+@app.route('/convert', methods=['POST'])
+def convert_text_to_speech():
+    text = request.form['text']
+    if not text.strip():
+        return "Error: No text provided.", 400
 
-    # Convertir texto a voz y guardarlo en un archivo MP3
-    engine.say(texto)
-    engine.save_to_file(texto, 'static/mensaje.mp3')
-    engine.runAndWait()
+    # Convierte el texto a voz usando gTTS
+    tts = gTTS(text, lang='in')  # Cambia el idioma si es necesario
+    audio_file = "output.mp3"
+    tts.save(audio_file)
 
-    return jsonify({"message": "Command processed", "audio_file": "mensaje.mp3"}), 200
+    # Envía el archivo de audio al frontend
+    return send_file(audio_file, as_attachment=True)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
+
+
