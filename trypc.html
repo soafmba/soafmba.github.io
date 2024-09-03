@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>PAIMON</title>
+
+    <script type="text/javascript">
+        function verificarContraseña() {
+            var password = prompt("Por favor, ingresa la contraseña:");
+            if (password === "777") {
+                alert("Contraseña correcta. Bienvenido.");
+            } else {
+                alert("Contraseña incorrecta.");
+                window.location.href = "error.html";
+            }
+        }
+
+        function enviarMensaje(sectionId) {
+            var mensaje = document.getElementById(`mensaje-${sectionId}`).value;
+            if (mensaje.trim() !== "") {
+                // Usar SpeechSynthesis para convertir el texto a voz
+                var speech = new SpeechSynthesisUtterance(mensaje);
+                speech.lang = "es-ES"; // Configura el idioma a español
+                window.speechSynthesis.speak(speech);
+
+                alert('Mensaje reproducido: ' + mensaje);
+            } else {
+                alert('Por favor, ingresa un mensaje válido.');
+            }
+        }
+    </script>
+</head>
+
+<body onload="verificarContraseña()">
+    <div class="container">
+        <header>
+            <a href="#" class="logo">
+                <img src="img/paimon.png" alt="">
+                <h1 id="Paimon">Paimon</h1>
+            </a>
+        </header>
+
+        <div class="container">
+            <div class="cart">
+                <div class="btn-1">
+                    <br>
+                    <div class="jose">
+                        <button class="boton-imagen" onclick="document.getElementById('sala1').scrollIntoView({ behavior: 'smooth' });">
+                            <img src="img/sala1.png" alt="Boton-1">
+                        </button>
+                    </div>
+                    <div class="martincito">
+                        <button class="boton-imagen1" onclick="document.getElementById('sala2').scrollIntoView({ behavior: 'smooth' });">
+                            <img src="img/sala2.png" alt="Boton-2">
+                        </button>
+                    </div>
+                    <div class="candia">
+                        <button class="boton-imagen2" onclick="document.getElementById('sala3').scrollIntoView({ behavior: 'smooth' });">
+                            <img src="img/sala3.png" alt="Boton-3">
+                        </button>
+                    </div>
+                    <div class="eldad">
+                        <button class="boton-imagen3" onclick="document.getElementById('sala4').scrollIntoView({ behavior: 'smooth' });">
+                            <img src="img/sala4.png" alt="Boton-4">
+                        </button>
+                    </div>
+                    <div class="lucas">
+                        <button class="boton-imagen4" onclick="document.getElementById('ALL').scrollIntoView({ behavior: 'smooth' });">
+                            <img src="img/all.png" alt="Boton-5">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-1">
+                <section id="sala1">
+                    <h2>SALA 1</h2>
+                    <form>
+                        <textarea id="mensaje-sala1" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        <button type="button" onclick="enviarMensaje('sala1')">Enviar</button>
+                    </form>
+                </section>
+                <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+                    <img src="img/up.png" alt="Boton-9">
+                </button>
+            </div>
+
+            <div class="cart-2">
+                <section id="sala2">
+                    <h2>SALA 2</h2>
+                    <form>
+                        <textarea id="mensaje-sala2" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        <button type="button" onclick="enviarMensaje('sala2')">Enviar</button>
+                    </form>
+                </section>
+                <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+                    <img src="img/up.png" alt="Boton-9">
+                </button>
+            </div>
+
+            <div class="cart-3">
+                <section id="sala3">
+                    <h2>SALA 3</h2>
+                    <form>
+                        <textarea id="mensaje-sala3" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        <button type="button" onclick="enviarMensaje('sala3')">Enviar</button>
+                    </form>
+                </section>
+                <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+                    <img src="img/up.png" alt="Boton-9">
+                </button>
+            </div>
+
+            <div class="cart-4">
+                <section id="sala4">
+                    <h2>SALA 4</h2>
+                    <form>
+                        <textarea id="mensaje-sala4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        <button type="button" onclick="enviarMensaje('sala4')">Enviar</button>
+                    </form>
+                </section>
+                <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+                    <img src="img/up.png" alt="Boton-9">
+                </button>
+            </div>
+
+            <div class="cart-5">
+                <section id="ALL">
+                    <h2>ALL</h2>
+                    <form>
+                        <textarea id="mensaje-ALL" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        <button type="button" onclick="enviarMensaje('ALL')">Enviar</button>
+                    </form>
+                </section>
+                <button class="boton-imagen9" onclick="document.getElementById('Paimon').scrollIntoView({ behavior: 'smooth' });">
+                    <img src="img/up.png" alt="Boton-9">
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
